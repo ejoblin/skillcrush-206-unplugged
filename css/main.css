@@ -95,11 +95,90 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/**** HEADER ****/
 
+header {
+    width: 100%;
+}
 
+#logo {
+    width: 100%;
+}
 
+nav {
+    width: 100%;
+}
 
+/**** MAIN ****/
 
+main {
+    width: 96%;
+    padding: 0 2%;
+    margin: auto;
+}
+
+/**** HERO AREA ****/
+
+/*.hero-area {
+    width: 100%;
+} */
+
+/**** featured news ****/
+
+.top-story {
+    width: 100%;
+}
+
+.top-info {
+    width: 100%;
+}
+
+/**** sidebar ****/
+
+.sidebar {
+    width: 100%;
+}
+
+/*.newsletter {
+    width: 100%;
+} */
+
+.newsletter-signup {
+    width: 100%;
+}
+
+/**** RECENT NEWS AND REVIEWS ****/
+
+.feed {
+    width: 100%;
+}
+
+.feed-item {
+    width: 100%;
+}
+
+.feed-type {
+    width: 100%
+}
+
+.feed-image {
+    width: 50%;
+}
+
+.feed-info {
+    width: 50%;
+}
+
+/**** FOOTER ****/
+
+footer {
+    width: 100%;
+}
+
+#footer-logo {
+    width: 50%;
+    margin: auto;
+}
 
 
 
