@@ -97,7 +97,7 @@ textarea {
 
 /**** HEADER ****/
 
-header {
+main-header {
     width: 100%;
 }
 
@@ -114,18 +114,18 @@ nav {
 main {
     width: 96%;
     padding: 0 2%;
-    margin: auto;
 }
 
 /**** HERO AREA ****/
 
-/*.hero-area {
-    width: 100%;
-} */
 
 /**** featured news ****/
 
 .top-story {
+    width: 100%;
+}
+
+.top-img {
     width: 100%;
 }
 
@@ -147,32 +147,41 @@ main {
     width: 100%;
 }
 
+.sidebar-upcoming, .sidebar-faq {
+    dispay: none;
+}
+
 /**** RECENT NEWS AND REVIEWS ****/
 
 .feed {
     width: 100%;
 }
 
+.feed p {
+    display: none;
+}
+
 .feed-item {
-    width: 100%;
+    clear: both;
 }
 
-.feed-type {
-    width: 100%
-}
 
-.feed-image {
-    width: 50%;
+.feed-img {
+    width: 45%;
+    float: left;
 }
 
 .feed-info {
-    width: 50%;
+    width: 42%;
+    float: left;
 }
 
 /**** FOOTER ****/
 
 footer {
     width: 100%;
+    margin: auto;
+    clear: both;
 }
 
 #footer-logo {
@@ -181,7 +190,11 @@ footer {
 }
 
 
+/**** DETAILED PAGES ****/
 
+.reviews-img, .news-img {
+    width: 100%;
+}
 
 
 
@@ -270,16 +283,198 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media (min-width: 768px) {
+    /*Tablet styles here!*/
+
+        /**** HEADER ****/
+
+    .main-header {
+        width: 94%;
+    }
+
+    #logo {
+        width: 40%;
+        float: left;
+    }
+
+    nav {
+        width: 60%;
+        float: right;
+    }
+
+    /**** HERO AREA ***/
+
+    /**** featured news ****/
+
+    .top-story {
+        width: 100%;
+    }
+
+    .top-img {
+        width: 57%;
+        float: left;
+        padding-right: 3%;
+    }
+    .top-info {
+        width: 37%;
+        float: left;
+    }
+
+    /**** sidebar ****/
+
+    .sidebar {
+        clear: both;
+        width: 37%;
+        float: right;
+    }
+
+    .sidebar-upcoming, .sidebar-faq {
+        display: block;
+    }
+
+    /*.newsletter {
+        width: 100%;
+    }   */
+
+    .newsletter-signup {
+        width: 100%;
+    }
+
+    .sidebar-upcoming, .sidebar-faq {
+        dispay: none;
+    }
+
+    /**** RECENT NEWS AND REVIEWS ****/
+
+    .feed {
+        width: 60%;
+        float: left;
+        border-right: 1px solid #ccc;
+    }
+
+    .feed-img {
+        width: 35%;
+    }
+
+    /*** DETAILED PAGES ***/
+
+
+    .reviews-img, .news-img {
+        width: 50%;
+        float: left;
+    }
+
+    .detail-title {
+        width: 47%;
+        float: left;
+    }
+
+    .detail .newsletter input {
+        display: inline;
+    }
+
+     /**** FOOTER ****/
+
+    footer {
+        width: 100%;
+        clear: both;
+    }
+
+    #footer-logo {
+        width: 30%;
+        margin: auto;
+    }
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media screen and (min-width: 940px) {
+    /*Desktop styles here!*/
+
+    /**** HERO AREA ****/
+
+    #logo {
+        width: 30%;
+    }
+
+    nav {
+        width: 60%;
+    }
+
+    .top-story {
+        width: 65%;
+        float: left;
+        border: none;
+    }
+
+    .top-img {
+        width: 100%;
+    }
+
+    .top-info {
+        width: 100%;
+        float: none;
+    }
+
+    /**** SIDEBAR ****/
+
+    .sidebar {
+        clear: none;
+        width: 30%;
+        float: right;
+    }
+
+    /**** NEWS / REVIEWS FEED ****/
+
+    .feed {
+        width: 100%;
+        float: none;
+        clear: both;
+    }
+
+    .feed p {
+        display: block;
+    }
+
+    .feed-img {
+        width: 20%;
+    }
+
+    /**** DETAILED PAGES ****/
+
+    article.detailed-content {
+        width: 65%;
+        float: left;
+    }
+
+    .reviews-img, .news-img {
+        width: 100%;
+        float: none;
+    }
+
+    .detail-title {
+        width: 100%;
+        float: none;
+    }
+
+    .detail {
+        width: 30%;
+        float: left;
+    }
+
+    .detail .newsletter input {
+        display: block;
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    #footer-logo {
+        width: 20%;
+    }
 }
+
+
 
 /* ==========================================================================
    Print styles.
