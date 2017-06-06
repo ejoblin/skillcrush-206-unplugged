@@ -95,9 +95,75 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+/**** GLOBAL STYLES ***/
+
+/* COLORS =============================================
+Dark Pink (Magenta): #b21e49;
+Light Grey: #eeeeee;
+Bright Pink: #ff1256;
+Dark Grey: #222222;
+Blue: #23a4cc;
+============================================= */
+
+body, html {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #222;
+    background: #eee;
+}
+
+a {
+    font-weight: 700;
+    color:#23a4cc;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+.btn {
+    background: #b21e49;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 2.5;
+    text-align: center;
+    box-shadow: 2px 2px 0 #dadada;
+    height: 2.5em;
+    width: 100%;
+    display: block;
+}
+
+    .btn:hover {
+        background: #ff1256;
+    }
+
+input.btn {
+    background: #ff1256;
+}
+
+    input.btn:hover {
+        background: #ff1256;
+    }
+
 /**** HEADER ****/
 
-main-header {
+.main-header {
     width: 100%;
 }
 
@@ -107,8 +173,18 @@ main-header {
 
 nav {
     width: 100%;
+    background: #ddd;
 }
 
+    nav ul li a {
+        font-size: 1.125em;
+        text-transform: uppercase;
+        color: #333;
+    }
+
+    nav ul li a:hover {
+        color: #ff1256;
+    }
 /**** MAIN ****/
 
 main {
@@ -116,10 +192,11 @@ main {
     padding: 0 2%;
 }
 
+
 /**** HERO AREA ****/
 
 
-/**** featured news ****/
+/**** featured news item ****/
 
 .top-story {
     width: 100%;
@@ -129,9 +206,6 @@ main {
     width: 100%;
 }
 
-.top-info {
-    width: 100%;
-}
 
 /**** sidebar ****/
 
@@ -139,17 +213,10 @@ main {
     width: 100%;
 }
 
-/*.newsletter {
-    width: 100%;
-} */
-
-.newsletter-signup {
-    width: 100%;
-}
-
 .sidebar-upcoming, .sidebar-faq {
     dispay: none;
 }
+
 
 /**** RECENT NEWS AND REVIEWS ****/
 
@@ -165,16 +232,36 @@ main {
     clear: both;
 }
 
+    .feed-type {
+        text-transform: uppercase;
+        font-size: 0.8em;
+    }
+
+    .feed-item h2 a {
+        color: #222;
+    }
+
+    .feed-item h2 a:hover {
+        color: #23a4cc;
+    }
+
+.feed-info {
+    width: 42%;
+    float: left;
+}
 
 .feed-img {
     width: 45%;
     float: left;
 }
 
-.feed-info {
-    width: 42%;
-    float: left;
+
+/**** DETAILED PAGES ****/
+
+.reviews-img, .news-img {
+    width: 100%;
 }
+
 
 /**** FOOTER ****/
 
@@ -188,19 +275,6 @@ footer {
     width: 50%;
     margin: auto;
 }
-
-
-/**** DETAILED PAGES ****/
-
-.reviews-img, .news-img {
-    width: 100%;
-}
-
-
-
-
-
-
 
 
 /* ==========================================================================
@@ -290,6 +364,8 @@ footer {
 
     .main-header {
         width: 94%;
+        max-width: 960px;
+        background: #ddd;
     }
 
     #logo {
@@ -316,7 +392,7 @@ footer {
         padding-right: 3%;
     }
     .top-info {
-        width: 37%;
+        width: 40%;
         float: left;
     }
 
@@ -340,20 +416,19 @@ footer {
         width: 100%;
     }
 
-    .sidebar-upcoming, .sidebar-faq {
-        dispay: none;
-    }
-
     /**** RECENT NEWS AND REVIEWS ****/
 
     .feed {
         width: 60%;
         float: left;
-        border-right: 1px solid #ccc;
     }
 
     .feed-img {
         width: 35%;
+    }
+
+    .feed-info {
+        width: 57%;
     }
 
     /*** DETAILED PAGES ***/
@@ -369,8 +444,21 @@ footer {
         float: left;
     }
 
+    .detail {
+        width: 100%;
+    }
+
     .detail .newsletter input {
         display: inline;
+    }
+
+    .detail .newsletter .btn {
+        width: 25%;
+    }
+
+    ul.article-meta-info {
+        width: 100%;
+        height: 2em;
     }
 
      /**** FOOTER ****/
@@ -389,6 +477,15 @@ footer {
 @media screen and (min-width: 940px) {
     /*Desktop styles here!*/
 
+
+    h1 {
+        font-size: 1.6em;
+        line-height: 1.8;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
     /**** HERO AREA ****/
 
     #logo {
@@ -407,6 +504,7 @@ footer {
 
     .top-img {
         width: 100%;
+        max-width: 620px;
     }
 
     .top-info {
@@ -430,9 +528,9 @@ footer {
         clear: both;
     }
 
-    .feed p {
-        display: block;
-    }
+        .feed p {
+            display: block;
+        }
 
     .feed-img {
         width: 20%;
@@ -464,6 +562,12 @@ footer {
         display: block;
         width: 100%;
     }
+
+    .detail .newsletter .btn {
+        width: 100%;
+    }
+
+    /*** FOOTER ***/
 
     footer {
         width: 100%;
